@@ -1,0 +1,26 @@
+UTENTI
+
+Utente non registrato
+•	Vede cosplay pubblici
+
+Utente registrato
+•	Vede cosplay pubblici
+•	Crea cosplay
+•	Si unisce in un gruppo
+•	Pianifica eventi
+•	Riceve notifiche sulla scadenza dei cosplay (se vuole)
+
+
+CASI D’USO
+
+Crea cosplay
+1.	Deve essere registrato / deve aver fatto il login
+2.	Entra nella schermata Cosplay
+3.	Preme il tasto + (ex. https://letscos.com/cosplay/add)
+4.	Vengono chiesti gli attributi del Cosplay
+5.	Preme il tasto Aggiungi Cosplay (ex. https://letscos.com/cosplay/add) con metodo POST
+6.	Viene indirizzato alla schermata Cosplay
+
+Vede cosplay pubblici
+1.  L'utente apre il link al cosplay (c'è una home per gli utenti non registrati?)
+2.  L'app controlla se l'utente è registrato, 
