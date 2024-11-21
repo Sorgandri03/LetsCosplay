@@ -6,9 +6,12 @@ Utente non registrato
 Utente registrato
 •	Vede cosplay pubblici
 •	Crea cosplay
-•	Si unisce in un gruppo
-•	Pianifica eventi
+•	Crea un nuovo gruppo
+•	Si unisce ad un gruppo
+•	Pianifica eventi (personali o di gruppo)
 •	Riceve notifiche sulla scadenza dei cosplay (se vuole)
+•	Aggiorna lo status dei cosplay
+•	Pubblica cosplay finiti (nella bacheca personale o nella bacheca generale)
 
 
 CASI D’USO
@@ -17,10 +20,117 @@ Crea cosplay
 1.	Deve essere registrato / deve aver fatto il login
 2.	Entra nella schermata Cosplay
 3.	Preme il tasto + (ex. https://letscos.com/cosplay/add)
-4.	Vengono chiesti gli attributi del Cosplay
-5.	Preme il tasto Aggiungi Cosplay (ex. https://letscos.com/cosplay/add) con metodo POST
-6.	Viene indirizzato alla schermata Cosplay
+4.	Vengono chiesti gli attributi del Cosplay 
+5.	Preme il tasto "Add Cos" (ex. https://letscos.com/cosplay/add) con metodo POST
+6.  Gli viene richiesto se vuole ricevere notifiche sulla scadenza del cosplay
+7.  Seleziona la sua preferenza sulla scadenza
+8.	Viene indirizzato alla schermata Cosplay
+(9. Nella schermata "Home" viene aggiunto il count-down relativo al nuovo Cosplay)
 
 Vede cosplay pubblici
 1.  L'utente apre il link al cosplay (c'è una home per gli utenti non registrati?)
-2.  L'app controlla se l'utente è registrato, 
+2.  L'app controlla se l'utente è registrato
+3.  Se l'utente è registrato può vedere i cosplay, interagire con loro e usare la web app normalmente
+4.  Se l'utente non è registrato può solo vedere i cosplay
+5.  Utente non registrato cerca di interagire con il cosplay
+6.  Pop-up "Oh no, pare che tu non sia registrato! Registrati ora per interagire con gli altri utenti e creare i tuoi cosplay!"
+
+Crea un gruppo
+1.  Deve essere registrato / deve aver fatto il login
+2.  Entra nella schermata "Groups"
+3.  Preme il tasto +
+4.  Viene chiesto se vuole entrare in un gruppo già esistente o creare un nuovo gruppo 
+5.  Seleziona "Create new group" (ex. https://letscos.com/groups/newgroup)
+6.  Vengono chiesti gli attributi del gruppo
+7.  Preme il tast "Create"
+8.  Viene fornito il codice identificativo del gruppo (con tasto che dà la possibilità di copiare il codice per condividerlo)
+9.  Si chiude il pop-up con il codice
+10. Viene indirizzato alla schermata Groups
+
+Si unisce ad un gruppo esistente
+1.  Deve essere registrato / deve aver fatto il login
+2.  Entra nella schermata "Groups"
+3.  Preme il tasto +
+4.  Viene chiesto se vuole entrare in un gruppo già esistente o creare un nuovo gruppo 
+5.  Seleziona "Join existing group"
+6.  Compare una barra di ricerca dove inserire il codice del gruppo da cercare
+7.  Viene effettuata la ricerca del gruppo
+8.  Si viene indirizzati alla pagina del gruppo ricercato (se esiste/codice inserito correttamente)
+9.  Preme il tasto "Request to join"
+10. Viene notificata la richiesta al creatore del gruppo
+11. Il creatore del gruppo accetta la richiesta
+12. L'utente è inserito nel gruppo e può ora interagire con esso
+
+Accetta richieste di ingresso nel gruppo
+1.  Arriva notifica di richiesta di accesso ad un gruppo creato dall'utente (visibile dalla schermata home)
+2.  Preme il tasto "See request"
+3.  Viene indirizzato alla schermata "Groups"
+4.  Viene visualizzato un pop-up con la richiesta
+5.  Preme il tasto "Accept request"
+6.  Viene indirizzato alla schermata del gruppo in questione, dove visualizza la lista dei componenti del gruppo
+
+Rifiuta rischieste di ingresso nel gruppo
+1.  Arriva notifica di richiesta di accesso ad un gruppo creato dall'utente (visibile dalla schermata home)
+2.  Preme il tasto "See request"
+3.  Viene indirizzato alla schermata "Groups"
+4.  Viene visualizzato un pop-up con la richiesta
+5.  Preme il tasto "Deny access"
+6.  Viene indirizzato alla schermata "Home"
+
+Crea cosplay nel gruppo
+1.	Deve essere registrato / deve aver fatto il login
+2.	Entra nella schermata "Groups"
+3.  Seleziona il gruppo su cui vuole lavorare
+4.  Viene indirizzato alla schermata del gruppo specifico
+5.  Preme il tasto + (ex. https://letscos.com/groups/name_group/add)
+4.	Vengono chiesti gli attributi del Cosplay
+5.	Preme il tasto "Publish Cosplay" (ex. https://letscos.com/groups/name_group/add) con metodo POST
+6.	Viene indirizzato alla schermata del gruppo specifico
+
+Pianifica eventi
+1.  Deve essere registrato / deve aver fatto il login
+2.  Entra nella schermata "Events"
+3.  Preme il tasto + (ex. https://letscos.com/events/add)
+4.	Vengono chiesti gli attributi dell'evento
+5.	Preme il tasto "Add Event" (ex. https://letscos.com/events/add) con metodo POST
+6.  Gli viene richiesto se vuole ricevere notifiche sulla scadenza dell'evento
+7.  Seleziona la sua preferenza sulla scadenza
+8.	Viene indirizzato alla schermata "Events"
+
+Pianifica eventi nel gruppo
+1.  Deve essere registrato / deve aver fatto il login
+2.  Entra nella schermata "Groups"
+3.  Seleziona il gruppo su cui vuole lavorare
+4.  Viene indirizzato alla schermata del gruppo specifico
+3.  Preme il tasto "Plan Event" (ex. https://letscos.com/groups/name_group/addevent)
+4.	Vengono chiesti gli attributi dell'evento
+5.	Preme il tasto "Add Event" (ex. https://letscos.com/groups/name_group/addevent)) con metodo POST
+6.  Viene inviata una copia degli attributi a tutti i membri del gruppo (una copia "personale" della lista di cose da fare)
+8.	Viene indirizzato alla schermata del gruppo specifico
+
+Aggiorna lo status dei cosplay
+1.  Deve essere registrato / deve aver fatto il login
+2.	Entra nella schermata "Cosplay"
+3.  Seleziona il progetto che vuole visualizzare/aggiornare
+4.  Viene indirizzato alla pagina del progetto corrispondente
+5.  Vengono visualizzati gli attributi del cosplay
+6.  Seleziona l'attributo con cui si vuole interagire
+7.  Si può modificare l'attributo (e.g. metterlo come completato)
+8.  Se l'attributo è completato, viene spostato nella sezione "Completed"
+9.  La percentuale di completamento del Cosplay aumenta
+10. Vengono visualizzati gli attributi del cosplay aggiornati
+11. Quando tutti gli attributi vengono completati compare un pop-up che informa che il progetto è finito
+12. Il progetto completato viene spostato nella sezione "Cosplayed!", dentro la schermata "Cosplay" (e.g. https://letscos.com/cosplay/cosplayed)
+13. Pop-up che segnala la possibilità di caricare una foto del cosplay completato sulla bacheca
+
+Pubblica cosplay finiti (nella bacheca personale o nella bacheca generale)
+1.  Deve essere registrato / deve aver fatto il login
+2.	Entra nella schermata "Board"
+3.  Preme il tasto + (e.g. https://letscos.com/board/add)
+4.  Vengono visualizzati i cosplay completati
+5.  Seleziona il progetto desiderato
+6.  Preme "Upload photo"
+7.  Seleziona la foto dalla galleria
+8.  Scegli se caricare la foto nella bacheca personale (visibile solo all'utente) o nella bacheca generale (visibile a tutti)
+9.  Carica la foto
+10. Viene indirizzato alla schermata "Board"
