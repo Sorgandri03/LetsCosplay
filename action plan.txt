@@ -8,6 +8,7 @@ Utente registrato
 •	Crea cosplay
 •	Crea un nuovo gruppo
 •	Si unisce ad un gruppo
+•	Stringe amicizia con altri utenti
 •	Pianifica eventi (personali o di gruppo)
 •	Riceve notifiche sulla scadenza dei cosplay (se vuole)
 •	Aggiorna lo status dei cosplay
@@ -134,3 +135,16 @@ Pubblica cosplay finiti (nella bacheca personale o nella bacheca generale)
 8.  Scegli se caricare la foto nella bacheca personale (visibile solo all'utente) o nella bacheca generale (visibile a tutti)
 9.  Carica la foto
 10. Viene indirizzato alla schermata "Board"
+
+Stringe amicizia con altri utenti
+1.  Deve essere registrato/deve aver fatto il login
+2.  Preme il tasto menù (in alto a sinistra)
+3.  Seleziona "Friends"
+4.  Viene indirizzato alla pagina "Friends" 
+5.  Preme sulla barra di ricerca
+6.  Inserisce il nome utente della persona che sta cercando
+7.  Clicca sull'utente giusto dalla eventuale lista di nomi che appare
+8.  Viene indirizzato sulla bacheca pubblica dell'utente in questione
+9.  Preme "Befriend" 
+10. Viene inviata la richiesta di amicizia all'altro utente
+11. Se la richiesta viene accettata gli utenti sono ora amici nell'app
